@@ -18,9 +18,9 @@ public class MyFirebaseInstanceIdService extends FirebaseInstanceIdService {
     public static final String TAG="NOTICIAS";
     @Override
     public void onTokenRefresh() {
-// obtener token InstanceID token.
+        // obtener token InstanceID token.
         String refreshedToken = FirebaseInstanceId.getInstance().getToken();
-        saveTokenToPrefs(refreshedToken);
+        //saveTokenToPrefs(refreshedToken);
         Log.d(TAG,"Token:"+refreshedToken);
     }
     private void saveTokenToPrefs(String _token) {
